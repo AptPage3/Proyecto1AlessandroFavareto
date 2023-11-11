@@ -18,6 +18,17 @@ namespace Proyecto1AlessandroFavareto
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
+            routes.MapRoute(
+                name: "Create Colaboladors",
+                url: "{controller}/{action}/{id}",
+                defaults: new { controller = "Colaboladors", action = "Create", id = UrlParameter.Optional }
+
+            );
+            routes.MapRoute(
+                name: "Crear Herramientas",
+                url: "{controller}/{action}/{id}",
+                defaults: new { controller = "Herramientas", action = "Create", id = UrlParameter.Optional }
+            );
         }
     }
 }
