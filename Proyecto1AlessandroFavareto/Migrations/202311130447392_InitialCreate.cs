@@ -8,17 +8,15 @@ namespace Proyecto1AlessandroFavareto.Migrations
         public override void Up()
         {
             CreateTable(
-                "dbo.Colaboladors",
+                "dbo.Colaboradors",
                 c => new
                     {
-                        id = c.Int(nullable: false, identity: true),
-                        nombre = c.String(),
-                        apellidos = c.String(),
-                        fechaRegistro = c.DateTime(nullable: false),
-                        estado = c.Boolean(nullable: false),
-                        cantidadHerramientas = c.Int(nullable: false),
+                        Cedula = c.Int(nullable: false, identity: true),
+                        Nombre = c.String(),
+                        Apellidos = c.String(),
+                        CantidadHerramientas = c.Int(nullable: false),
                     })
-                .PrimaryKey(t => t.id);
+                .PrimaryKey(t => t.Cedula);
             
             CreateTable(
                 "dbo.Herramientas",
@@ -37,7 +35,7 @@ namespace Proyecto1AlessandroFavareto.Migrations
         public override void Down()
         {
             DropTable("dbo.Herramientas");
-            DropTable("dbo.Colaboladors");
+            DropTable("dbo.Colaboradors");
         }
     }
 }

@@ -19,7 +19,7 @@ namespace Proyecto1AlessandroFavareto.Data
         {
         }
 
-        public System.Data.Entity.DbSet<Proyecto1AlessandroFavareto.Models.Colabolador> Colaboladors { get; set; }
+        public System.Data.Entity.DbSet<Proyecto1AlessandroFavareto.Models.Colaborador> Colaboladors { get; set; }
 
         public System.Data.Entity.DbSet<Proyecto1AlessandroFavareto.Models.Herramientas> Herramientas { get; set; }
     }

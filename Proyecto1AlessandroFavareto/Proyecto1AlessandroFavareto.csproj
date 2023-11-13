@@ -52,6 +52,7 @@
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -127,18 +128,19 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\ColaboladorsController.cs" />
+    <Compile Include="Controllers\ColaboradorsController.cs" />
     <Compile Include="Controllers\HerramientasController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Data\Proyecto1AlessandroFavaretoContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202311092111443_InitialCreate.cs" />
-    <Compile Include="Migrations\202311092111443_InitialCreate.Designer.cs">
-      <DependentUpon>202311092111443_InitialCreate.cs</DependentUpon>
+    <Compile Include="Migrations\202311130447392_InitialCreate.cs" />
+    <Compile Include="Migrations\202311130447392_InitialCreate.Designer.cs">
+      <DependentUpon>202311130447392_InitialCreate.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Models\Colabolador.cs" />
+    <Compile Include="Models\Colaborador.cs" />
     <Compile Include="Models\Herramientas.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -178,16 +180,16 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Colaboladors\Create.cshtml" />
-    <Content Include="Views\Colaboladors\Delete.cshtml" />
-    <Content Include="Views\Colaboladors\Details.cshtml" />
-    <Content Include="Views\Colaboladors\Edit.cshtml" />
-    <Content Include="Views\Colaboladors\Index.cshtml" />
     <Content Include="Views\Herramientas\Create.cshtml" />
     <Content Include="Views\Herramientas\Delete.cshtml" />
     <Content Include="Views\Herramientas\Details.cshtml" />
     <Content Include="Views\Herramientas\Edit.cshtml" />
     <Content Include="Views\Herramientas\Index.cshtml" />
+    <Content Include="Views\Colaboradors\Create.cshtml" />
+    <Content Include="Views\Colaboradors\Delete.cshtml" />
+    <Content Include="Views\Colaboradors\Details.cshtml" />
+    <Content Include="Views\Colaboradors\Edit.cshtml" />
+    <Content Include="Views\Colaboradors\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -206,8 +208,8 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202311092111443_InitialCreate.resx">
-      <DependentUpon>202311092111443_InitialCreate.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202311130447392_InitialCreate.resx">
+      <DependentUpon>202311130447392_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

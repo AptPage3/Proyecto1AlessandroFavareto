@@ -13,7 +13,7 @@ namespace Proyecto1AlessandroFavareto.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "202311092111443_InitialCreate"; }
+            get { return "202311130447392_InitialCreate"; }
         }
         
         string IMigrationMetadata.Source
