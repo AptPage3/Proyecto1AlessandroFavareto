@@ -127,7 +127,6 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\ColaboladorsController.cs" />
     <Compile Include="Controllers\ColaboradorsController.cs" />
     <Compile Include="Controllers\HerramientasController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -188,8 +187,9 @@
     <Content Include="Views\Colaboradors\Create.cshtml" />
     <Content Include="Views\Colaboradors\Delete.cshtml" />
     <Content Include="Views\Colaboradors\Details.cshtml" />
-    <Content Include="Views\Colaboradors\Edit.cshtml" />
     <Content Include="Views\Colaboradors\Index.cshtml" />
+    <Content Include="Views\Colaboradors\Edit.cshtml" />
+    <Content Include="Views\Colaboradors\Ingresar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -21,13 +21,19 @@ namespace Proyecto1AlessandroFavareto
             routes.MapRoute(
                 name: "Create Colaboradors",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Colaboradors", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "Colaboradors", action = "Create", id = UrlParameter.Optional }
+
+            );
+            routes.MapRoute(
+                name: "Ingreso Colaboradors",
+                url: "{controller}/{action}/{id}",
+                defaults: new { controller = "Colaboradors", action = "Ingresar", id = UrlParameter.Optional }
 
             );
             routes.MapRoute(
                 name: "Crear Herramientas",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Herramientas", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "Herramientas", action = "Create", id = UrlParameter.Optional }
             );
         }
     }

@@ -9,6 +9,7 @@ using System.Web;
 using System.Web.Mvc;
 using Proyecto1AlessandroFavareto.Data;
 using Proyecto1AlessandroFavareto.Models;
+using System.Windows;
 
 namespace Proyecto1AlessandroFavareto.Controllers
 {
@@ -62,6 +63,7 @@ namespace Proyecto1AlessandroFavareto.Controllers
                     conexion.Open();
                     cmd.ExecuteNonQuery();
                 }
+                MessageBox.Show("Los datos se guardaron correctamente");
                 /*db.Colaboladors.Add(colabolador);
                 db.SaveChanges();*/
                 return RedirectToAction("Index");
@@ -127,6 +129,26 @@ namespace Proyecto1AlessandroFavareto.Controllers
             return RedirectToAction("Index");
         }
 
+        public ActionResult Ingresar()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Ingresar([Bind(Include = "Cedula,Nombre,Apellidos,CantidadHerramientas")] Colaborador colaborador)
+        {
+            Colaborador colaborador2 = db.Colaboladors.Find(colaborador.Cedula);
+            if (colaborador!=null)
+            {
+                MessageBox.Show("Hay Datos");
+            }
+            if (colaborador == null)
+            {
+                MessageBox.Show("Nel");
+            }
+            return RedirectToAction("Ingresar");
+        }
         protected override void Dispose(bool disposing)
         {
             if (disposing)
