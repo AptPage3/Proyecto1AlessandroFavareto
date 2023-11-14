@@ -9,32 +9,39 @@
 <div>
     <h4>Colaborador</h4>
     <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Nombre)
-        </dt>
+	<dl class="dl-horizontal">
+		<dt>
+			@Html.DisplayNameFor(model => model.Cedula)
+		</dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Nombre)
-        </dd>
+		<dd>
+			@Html.DisplayFor(model => model.Ced)
+		</dd>
+		<dt>
+			@Html.DisplayNameFor(model => model.Nombre)
+		</dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Apellidos)
-        </dt>
+		<dd>
+			@Html.DisplayFor(model => model.Nombre)
+		</dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Apellidos)
-        </dd>
+		<dt>
+			@Html.DisplayNameFor(model => model.Apellidos)
+		</dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.CantidadHerramientas)
-        </dt>
+		<dd>
+			@Html.DisplayFor(model => model.Apellidos)
+		</dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.CantidadHerramientas)
-        </dd>
+		<dt>
+			@Html.DisplayNameFor(model => model.CantidadHerramientas)
+		</dt>
 
-    </dl>
+		<dd>
+			@Html.DisplayFor(model => model.CantidadHerramientas)
+		</dd>
+
+	</dl>
 </div>
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.Cedula }) |

@@ -64,8 +64,7 @@ namespace Proyecto1AlessandroFavareto.Controllers
                     cmd.ExecuteNonQuery();
                 }
                 MessageBox.Show("Los datos se guardaron correctamente");
-                /*db.Colaboladors.Add(colabolador);
-                db.SaveChanges();*/
+
                 return RedirectToAction("Index");
             }
 
@@ -136,18 +135,20 @@ namespace Proyecto1AlessandroFavareto.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Ingresar([Bind(Include = "Cedula,Nombre,Apellidos,CantidadHerramientas")] Colaborador colaborador)
+        public ActionResult Ingresar(int? id)
         {
-            Colaborador colaborador2 = db.Colaboladors.Find(colaborador.Cedula);
-            if (colaborador!=null)
+            var x = db.Colaboladors.FirstOrDefault(t => t.Cedula == id);
+
+            if (x != null)
             {
-                MessageBox.Show("Hay Datos");
+                return RedirectToAction("Index","Herramientas");
             }
-            if (colaborador == null)
+            else
             {
-                MessageBox.Show("Nel");
+                MessageBox.Show("Los datos ingresados no son correctos");
+                return RedirectToAction("Ingresar"); 
             }
-            return RedirectToAction("Ingresar");
+            
         }
         protected override void Dispose(bool disposing)
         {
