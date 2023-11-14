@@ -51,8 +51,16 @@ namespace Proyecto1AlessandroFavareto.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create(Colaborador colabolador)
         {
-            if (ModelState.IsValid)
+            var x = db.Colaboladors.FirstOrDefault(t => t.Cedula == colabolador.Cedula);
+
+            if (x != null)
             {
+                MessageBox.Show("Esa cédula ya esta registrada");
+                return RedirectToAction("Create");
+            }
+            else
+            {
+                
                 SqlConnection conexion = new SqlConnection("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=Proyecto1AlessandroFavaretoContext-20231107233909;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
                 using (SqlCommand cmd = new SqlCommand("INSERT INTO Colaboradors(Cedula, Nombre, Apellidos, CantidadHerramientas) VALUES (@param1, @param2, @param3,@param4);", conexion))
                 {
@@ -65,10 +73,10 @@ namespace Proyecto1AlessandroFavareto.Controllers
                 }
                 MessageBox.Show("Los datos se guardaron correctamente");
 
-                return RedirectToAction("Index");
+                return RedirectToAction("Index","Home");
             }
 
-            return View(colabolador);
+
         }
 
         // GET: Colaboradors/Edit/5
@@ -137,9 +145,9 @@ namespace Proyecto1AlessandroFavareto.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Ingresar(int? id)
         {
-            var x = db.Colaboladors.FirstOrDefault(t => t.Cedula == id);
+            var conexion = db.Colaboladors.FirstOrDefault(t => t.Cedula == id);
 
-            if (x != null)
+            if (conexion != null)
             {
                 return RedirectToAction("Index","Herramientas");
             }
